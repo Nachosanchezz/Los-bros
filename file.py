@@ -28,3 +28,18 @@ puntos2 = cartas[carta2]
 puntosjugador = puntos + puntos2
 
 print(f"Tus cartas son {carta} con valor {puntos} y {carta2} con valor {puntos2}. Tus cartas suman {puntos + puntos2}.\n")
+
+cartan1mesa = choice(lista_cartas)
+cartan2mesa = choice(lista_cartas)
+print("Carta numero 1: ", cartan1mesa)
+print("Carta numero 2: ", cartan2mesa)
+cartas_mesa = [cartan1mesa, cartan2mesa]
+print("Cartas de la mesa: ", cartas_mesa)
+valor_cartas_mesa = cartas[cartan1mesa] + cartas[cartan2mesa]
+print("Valor de las cartas de la mesa: ", valor_cartas_mesa)
+if puntosjugador>valor_cartas_mesa<21:
+    print("Has ganado")
+elif puntosjugador<valor_cartas_mesa<21:
+    print("Has perdido")
+elif puntosjugador==valor_cartas_mesa:
+    print("Empate") 
