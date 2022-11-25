@@ -15,3 +15,16 @@ cartas = {
     chr(0x1f0ad): 10, 
     chr(0x1f0ae): 10, 
 } 
+
+print("")
+print(f"Las cartas y sus puntos son: {cartas}.\n" )         #Se enseñan las cartas y su puntuación.
+
+
+lista_cartas = list(cartas)                             
+carta = choice(lista_cartas)                            #Se elige aleatoriamente las dos cartas del jugador
+carta2 = choice(lista_cartas)
+puntos = cartas[carta]                                  #Determinamos las puntuaciones de las dos cartas por separado del jugador
+puntos2 = cartas[carta2]
+puntosjugador = puntos + puntos2
+
+print(f"Tus cartas son {carta} con valor {puntos} y {carta2} con valor {puntos2}. Tus cartas suman {puntos + puntos2}.\n")
